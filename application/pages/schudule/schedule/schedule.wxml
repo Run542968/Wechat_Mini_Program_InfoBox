@@ -1,0 +1,42 @@
+<view class="top bg-cyan1">
+  <view class="day">
+    <text>{{todayDate[2]}}</text>
+  </view>
+  <view class="date">
+    <text>{{weeks[todayDate[3]]}}\n</text>
+    <text>{{todayDate[1]}}月 {{todayDate[0]}}</text>
+  </view>
+  <view class="current">
+    <view class="currenttext">Today</view>
+  </view>
+</view>
+<view class="list">
+  <view class="item {{item.event.index == 0 ? 'lecture' : item.event.index == 1 ? 'volunteer' : 'campus'}}"
+    wx:for="{{information}}" wx:key="index" wx:if="{{ifSchedule[index]}}" bind:tap="clickSchedule"
+    data-docID="{{item._id}}" data-item_index="{{index}}">
+    <view class="infotop">
+      <view class="line"></view>
+      <view class="infoday">
+        <text class="text1">{{item.event.Date}}</text>
+        <text class="text2">{{item.event.Time}}</text>
+      </view>
+      <image class="tag1" wx:if="{{ifExpired[index]}}"></image>
+      <image class="tag1"
+        src="/image/{{item.event.index == 0 ? 'lecture' : item.event.index == 1 ? 'volunteer' : 'campus'}}Remind{{ifSubscribe[index] ? 'ed' : ''}}.svg"
+        wx:if="{{ifSubscribe[index] && !ifExpired[index]}}"></image>
+      <image class="tag1"
+        src="/image/{{item.event.index == 0 ? 'lecture' : item.event.index == 1 ? 'volunteer' : 'campus'}}Remind.svg"
+        wx:if="{{!ifSubscribe[index] && !ifExpired[index]}}" catch:tap="clickSubscribe" data-docID="{{item._id}}"
+        data-item_index="{{index}}"></image>
+      <image class="tag2"
+        src="/image/{{item.event.index == 0 ? 'lecture' : item.event.index == 1 ? 'volunteer' : 'campus'}}Del.svg"
+        catch:tap="clickCancelSchedule" data-docID="{{item._id}}" data-item_index="{{index}}"></image>
+    </view>
+    <view class="info">
+      <text class="text3">{{item.event.Title}}</text>
+      <text class="text4">\n地点：{{item.event.Location}}\n主办单位：{{item.event.Holder}}</text>
+    </view>
+    <view wx:if="{{item.event.index == 0}}" class="tag3"><text>讲座票</text></view>
+    <view wx:if="{{item.event.index == 1}}" class="tag3"><text>志愿时</text></view>
+  </view>
+</view>

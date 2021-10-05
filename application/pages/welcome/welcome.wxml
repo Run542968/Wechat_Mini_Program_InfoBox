@@ -1,0 +1,6 @@
+<view class="box" animation="{{ani1}}">
+  <view class="item"  bindtap="enterProgram" animation="{{ani2}}">
+    <text>点击进入</text>
+    <image src="/image/enter.svg"></image>
+  </view>
+</view>

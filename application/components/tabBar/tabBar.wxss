@@ -1,0 +1,22 @@
+.bottom {
+  position: fixed;
+  height: 80rpx;
+  width: 750rpx;
+  bottom: 3.5vh;
+}
+
+.bar {
+  display: inline-flex;
+  width: 750rpx;
+  height: 100%;
+  border-radius: 75px;
+  margin: 20 50rpx;
+  /* padding: 20rpx 25rpx; */
+  background: rgb(82, 138, 137);
+}
+
+.icon {
+  /* margin: 0 12.5%; */
+  height: 50rpx;
+  width: 50rpx;
+}

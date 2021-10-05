@@ -1,0 +1,16 @@
+<cover-view class='nav_box' style='background:{{navColor}}'> 
+  <cover-view style='height:{{s}}px' /> 
+  <cover-view class='navBar' style='height:{{n}}px'> 
+    <cover-view class='content' style='height:{{h}}px'> 
+  
+      <!-- 导航自定义内容 --> 
+  
+      <!-- 2. 选择渲染 可在js页面 设置渲染type属性 不同场景传不同值 --> 
+      <block> 
+        {{pageTitle}}
+      </block> 
+  
+    </cover-view> 
+  </cover-view> 
+</cover-view> 
+<view style='height:{{s+n}}px' /> <!-- 注：占位用 -->

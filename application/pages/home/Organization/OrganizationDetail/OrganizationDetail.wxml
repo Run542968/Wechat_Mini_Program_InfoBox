@@ -1,0 +1,50 @@
+<returnBar pageTitle="{{information.event.Title}}"></returnBar>
+<view class="detail-container">
+  <view class="image-cover">
+    <image class="head-image" src="{{information.event.imgList[0]}}"></image>
+  </view>
+  <view class="OrgIntro">
+    <view class="line-title">
+      <view class="line1"></view>
+      <view class="title">组织介绍</view>
+      <view class="line1"></view>
+    </view>
+    <view class="const-text">{{information.event.OrgIntrodution}}</view>
+  </view>
+  <view class="OrgActivity">
+    <view class="line-title">
+      <view class="line2"></view>
+      <view class="title">部分活动介绍</view>
+      <view class="line2"></view>
+    </view>
+    <view class="intro1">
+      <view class="subtitle">
+        <text>{{information.event.inputOrgActivityIntro1[0]}}</text>
+      </view>
+      <view class="const-text">{{information.event.inputOrgActivityIntro1[1]}}</view>
+      <view class="images">
+        <image src="{{information.event.imgList[1]}}"></image>
+        <image src="{{information.event.imgList[2]}}"></image>
+      </view>
+    </view>
+    <view class="intro2">
+      <view class="subtitle">
+        <text>{{information.event.inputOrgActivityIntro2[0]}}</text>
+      </view>
+      <view class="const-text">{{information.event.inputOrgActivityIntro2[1]}}</view>
+      <view class="images">
+        <image src="{{information.event.imgList[3]}}"></image>
+        <image src="{{information.event.imgList[4]}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="publicContact">
+    <view class="line-title">
+      <view class="line2"></view>
+      <view class="title">公众号二维码</view>
+      <view class="line2"></view>
+    </view>
+    <image src="{{information.event.imgList[5]}}"></image>
+    <view>公众号名称：{{information.event.PublicTitle}}</view>
+  </view>
+</view>

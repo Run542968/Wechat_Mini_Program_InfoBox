@@ -1,0 +1,20 @@
+<swiper previous-margin="60px" next-margin="100px" circular="true" autoplay="true" interval="5000" duration="500"
+ current='0' bindchange='swiperChange'>
+  <swiper-item wx:for='{{swiperImgUrls}}'>
+    <image class='{{swiperIndex == index ? "active" : "quiet"}}' src="{{item}}"></image>
+  </swiper-item>
+</swiper>
+<view class="middle">
+  <view class="button a" bind:tap="clickLecture">
+    <text>校内讲座</text>
+  </view>
+  <view class="button b" bind:tap="clickCampus">
+    <text>校园活动</text>
+  </view>
+  <view class="button c" bind:tap="clickVolunteer">
+    <text>志愿活动</text>
+  </view>
+  <view class="button d" bind:tap="clickOrganization">
+    <text>组织介绍</text>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="bottom">
+  <view class="bar">
+      <image class="icon" bind:tap="toHome" src="/image/home.svg"></image>
+      <!-- <image class="icon" bind:tap="toSchudule" src="/image/schudule.svg"></image> -->
+      <image class="icon" bind:tap="toMine" src="/image/mine.svg"></image>
+  </view>
+</view>

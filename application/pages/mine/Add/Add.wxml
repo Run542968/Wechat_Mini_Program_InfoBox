@@ -1,0 +1,99 @@
+<returnBar pageTitle="{{pageAdd}}"></returnBar>
+<form>
+  <view class="cu-form-group margin-top">
+		<view class="title">活动大标题</view>
+		<input placeholder="我是最美劳动者" bindinput="inputTitle"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">活动小标题</view>
+		<input placeholder="星光社区摄影征集活动" bindinput="inputSubTitle"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">日期选择</view>
+		<picker mode="date" value="{{Date}}" start="{{Date}}" end="2100-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{Date}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">时间选择</view>
+		<picker mode="time" value="{{Time}}" start="00:00" end="23:59" bindchange="TimeChange">
+			<view class="picker">
+				{{Time}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">活动地点</view>
+		<input placeholder="活动地点" bindinput="inputLocation"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">主办单位</view>
+		<input placeholder="主办单位" bindinput="inputHolder"></input>
+  </view>
+	<view class="cu-form-group">
+		<view class="title">信息来源</view>
+		<input placeholder="转载自华工知识产权协会" bindinput="inputInforCome"></input>
+  </view>
+  <view class="cu-form-group margin-top">
+		<view class="title">活动类型</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'活动类型'}}
+			</view>
+		</picker>
+	</view>
+	<!-- 不同的活动类型选择，跳出不同的类型信息填写框 -->
+	<view class="cu-form-group" wx:if="{{index==0}}">
+		<view class="title">讲座票类型</view>
+		<input placeholder="讲座票" bindinput="inputLectureInf"></input>
+	</view>
+
+	<view class="cu-form-group" wx:if="{{index==1}}">
+		<view class="title">志愿奖励</view>
+		<input placeholder="志愿时" bindinput="inputVolunteerInf"></input>
+	</view>
+	<view class="cu-form-group" wx:if="{{index==1}}">
+		<view class="title">招募人数</view>
+		<input placeholder="30人" bindinput="inputVolunteerNumber"></input>
+	</view>
+	<view class="cu-form-group" wx:if="{{index==1}}">
+		<view class="title">报名联络人</view>
+		<input placeholder="张三 180xxxx0021" bindinput="inputVolunteerContact"></input>
+	</view>
+	<view class="cu-form-group" wx:if="{{index==1}}">
+		<view class="title">投递方式</view>
+		<input placeholder="社工办公室/网上投递:112@qq.com" bindinput="inputVolunteerContactWay"></input>
+	</view>
+
+	<view class="cu-form-group" wx:if="{{index==2}}">
+		<view class="title">活动类型</view>
+		<input placeholder="组织招新/趣味活动" bindinput="inputActivityInf"></input>
+  </view>
+  <view class="cu-bar bg-white margin-top" wx:if="{{index!=1}}">
+		<view class="action">
+			文案插图
+		</view>
+		<view class="action">
+			{{tempImgList.length}}/1
+		</view>
+	</view>
+	<view class="cu-form-group" wx:if="{{index!=1}}">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{tempImgList}}" wx:key="index" bindtap="ViewImage" data-url="{{tempImgList[index]}}">
+				<image src='{{tempImgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{tempImgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+  <view class="cu-form-group margin-top">
+		<textarea maxlength="-1" bindinput="inputTextarea" placeholder="在这里输入活动介绍"></textarea>
+	</view>
+	<button bind:tap="clickUpload">上传</button>
+</form>

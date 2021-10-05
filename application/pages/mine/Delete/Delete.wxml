@@ -1,0 +1,24 @@
+<returnBar pageTitle="{{PageDelete}}"></returnBar>
+<view class="list">
+  <view class="item {{item.event.index == 0 ? 'lecture' : item.event.index == 1 ? 'volunteer' : 'campus'}}"
+    wx:for="{{activities}}" wx:key="index"  bind:tap="clickSchedule"
+    data-docID="{{item._id}}" data-item_index="{{index}}">
+    <view class="infotop">
+      <view class="line"></view>
+      <view class="infoday">
+        <text class="text1">{{item.event.Date}}</text>
+        <text class="text2">{{item.event.Time}}</text>
+      </view>
+      <image class="tag1"></image>
+      <image class="tag2"
+        src="/image/{{item.event.index == 0 ? 'lecture' : item.event.index == 1 ? 'volunteer' : 'campus'}}Del.svg"
+        catch:tap="clickDeleteActivity" data-docID="{{item._id}}" data-item_index="{{index}}"></image>
+    </view>
+    <view class="info">
+      <text class="text3">{{item.event.Title}}</text>
+      <text class="text4">\n地点：{{item.event.Location}}\n主办单位：{{item.event.InforCome}}</text>
+    </view>
+    <view wx:if="{{item.event.index == 0}}" class="tag3"><text>讲座票</text></view>
+    <view wx:if="{{item.event.index == 1}}" class="tag3"><text>志愿时</text></view>
+  </view>
+</view>

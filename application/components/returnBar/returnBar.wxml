@@ -1,0 +1,17 @@
+<view class='nav_box' style='background:{{navColor}}'> 
+  <view style='height:{{s}}px' /> 
+  <view class='navBar' style='height:{{n}}px'> 
+    <view class='content' style='height:{{h}}px'> 
+  
+      <!-- 导航自定义内容 --> 
+  
+      <!-- 2. 选择渲染 可在js页面 设置渲染type属性 不同场景传不同值 -->
+      <image class="icon" bindtap="toBack" src="/image/back.svg"></image> 
+      <view class="title"> 
+        {{pageTitle}}
+      </view> 
+  
+    </view> 
+  </view> 
+</view> 
+<view style='height:{{s+n}}px' /> <!-- 注：占位用 -->

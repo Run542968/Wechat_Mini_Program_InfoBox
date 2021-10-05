@@ -1,0 +1,28 @@
+.nav_box {
+  position: fixed;
+  width: 100%;
+  font-size: 15px;
+  z-index: 999;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* background: rgb(144, 216, 204);  */
+}
+.icon {
+  height: 55rpx;
+  width: 85rpx;
+  position: absolute;
+  left: 15rpx;
+}
+
+.title{
+  margin:0 auto;
+  font-size: 35rpx;
+  font-weight: 700;
+  letter-spacing:4rpx;
+  color: rgb(0, 0, 0);
+}

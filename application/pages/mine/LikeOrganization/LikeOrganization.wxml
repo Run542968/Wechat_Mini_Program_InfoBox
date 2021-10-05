@@ -1,0 +1,20 @@
+<returnBar pageTitle="{{pageLecture}}"></returnBar>
+<view class="numOfOrg">
+  <view class="numOfOrgCover">
+    <view class="const-text">已关注组织</view>
+    <view class="number">{{LikeOrgNumber}}</view>
+  </view>
+</view>
+
+<view class="organizations">
+  <view class="organization" wx:for="{{information}}" wx:key="index" wx:if="{{ifLike[index]}}"
+    bind:tap='clickOrganization' data-item_index="{{index}}" data-docID="{{item._id}}">
+    <image class="image" src="{{item.event.imgList[0]}}" />
+    <view class="text">
+      <text class="title">{{item.event.Title}}\n</text>
+      <text class="title">{{item.event.Belongs}}</text>
+    </view>
+    <image class="addFavor"  catchtap="clickLike" data-item_index="{{index}}"
+      data-docID="{{item._id}}" src="/image/已关注组织.svg"></image>
+  </view>
+</view>

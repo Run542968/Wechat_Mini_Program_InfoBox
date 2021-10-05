@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "home":"/pages/home/home/home",
+    "mine":"/pages/mine/mine/mine",
+    "schedule":"/pages/schudule/schedule/schedule",
+    "titleBar":"/components/titleBar/titleBar"
+  }
+}

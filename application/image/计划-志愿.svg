@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" id="&#x56FE;&#x5C42;_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 900.002 500" style="enable-background:new 0 0 900.002 500;" xml:space="preserve">
+<path style="fill:#D2B6EC;" d="M820,500H80c-44,0-80-36-80-80V80C0,36,36,0,80,0h740c44,0,80,36,80,80v340C900,464,864,500,820,500z
+	"/>
+<g>
+	<defs>
+		<path id="SVGID_5_" d="M820.002,500h-740c-44,0-80-36-80-80V80c0-44,36-80,80-80h740c44,0,80,36,80,80v340
+			C900.002,464,864.002,500,820.002,500z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+	</clipPath>
+	<circle style="clip-path:url(#SVGID_2_);fill:#E5D1FF;" cx="708.12" cy="463.745" r="235.404"/>
+	<circle style="clip-path:url(#SVGID_2_);fill:#DAC2F3;" cx="768.374" cy="400.426" r="235.404"/>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_23_" d="M1004.995-20h-740c-44,0-80-36-80-80v-340c0-44,36-80,80-80h740c44,0,80,36,80,80v340
+			C1084.995-56,1048.995-20,1004.995-20z"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
+	</clipPath>
+	<circle style="clip-path:url(#SVGID_4_);fill:#FFD1AF;" cx="893.113" cy="-56.255" r="235.404"/>
+	<circle style="clip-path:url(#SVGID_4_);fill:#FFC59B;" cx="953.366" cy="-119.574" r="235.404"/>
+</g>
+</svg>

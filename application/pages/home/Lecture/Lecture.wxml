@@ -1,0 +1,26 @@
+<wxs src="./indexOf.wxs" module="tools" />
+<returnBar pageTitle="{{pageLecture}}"></returnBar>
+<view class="container">
+  <!-- 标题 -->
+  <view class="page-body">
+    <!-- 每一个Lecture条目 -->
+    <view class="lecture" wx:for="{{information}}" wx:key="index" wx:if="{{item.event.Lecture}}" bind:tap="clickLecture" data-item_index="{{index}}" data-docID="{{item._id}}">
+      <view class="context">
+        <view class="title-showDetail">
+          <view class="title">{{item.event.Title}}</view>
+          <view class="showDetail" wx:if="{{!tools.indexOf(indexShow,index)}}"  data-i="{{index}}" catchtap="clickShowDetail"></view>
+          <view class="showLess" wx:if="{{tools.indexOf(indexShow,index)}}"  data-i="{{index}}" catchtap="clickShowLess"></view>
+        </view>
+        <view class="date-location-author{{tools.indexOf(indexShow,index)?'Active':''}}">
+          <view>时间：{{item.event.Date}} {{item.event.Time}}</view>
+          <view>地点：{{item.event.Location}}</view>
+          <view>举办方：{{item.event.Holder}}</view>
+          <view>讲座票：{{item.event.LectureInf}}</view>
+        </view>
+        <view class="addSchedulePic" wx:if="{{!ifSchedule[index]}}" catchtap="clickSchedule"
+          data-item_index="{{index}}" data-docID="{{item._id}}"></view>
+        <view class="addScheduleIn" wx:if="{{ifSchedule[index]}}"></view>
+      </view>
+    </view>
+  </view>
+</view>

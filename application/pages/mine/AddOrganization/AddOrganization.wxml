@@ -1,0 +1,54 @@
+<returnBar pageTitle="{{pageAddOrg}}"></returnBar>
+<form>
+  <view class="cu-form-group">
+    <view class="title">组织名称</view>
+    <input placeholder="请输入组织名称" bindinput="inputTitle"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">组织归属</view>
+    <input placeholder="请输入组织归属" bindinput="inputBelongs"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">组织公众号名称</view>
+    <input placeholder="请输入组织公众号名称" bindinput="inputPublicTitle"></input>
+  </view>
+  <view class="cu-form-group">
+		<view class="title">组织级别</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'组织级别'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+    <textarea maxlength="-1" bindinput="inputOrgIntrodution" placeholder="在这里输入组织简介"></textarea>
+  </view>
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      1:组织图标  2-3:活动1插图  4-5：活动2插图  6：组织公众号二维码
+    </view>
+    <view class="action">
+      {{tempImgList.length}}/6
+    </view>
+  </view>
+  <view class="cu-form-group">
+    <view class="grid col-4 grid-square flex-sub">
+      <view class="bg-img" wx:for="{{tempImgList}}" wx:key="index" bindtap="ViewImage" data-url="{{tempImgList[index]}}">
+        <image src='{{tempImgList[index]}}' mode='aspectFill'></image>
+        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+          <text class="cuIcon-close"></text>
+        </view>
+      </view>
+      <view class="solids" bindtap="ChooseImage" wx:if="{{tempImgList.length<6}}">
+        <text class="cuIcon-cameraadd"></text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-form-group margin-top">
+    <textarea maxlength="-1" bindinput="inputOrgActivityIntro1" placeholder="在这里输入活动一文案(可不填) 格式：第一行小标题，第二行开始文案"></textarea>
+  </view>
+  <view class="cu-form-group">
+    <textarea maxlength="-1" bindinput="inputOrgActivityIntro2" placeholder="在这里输入活动二文案(可不填) 格式：第一行小标题，第二行开始文案"></textarea>
+  </view>
+  <button bind:tap="clickUpload">上传</button>
+</form>

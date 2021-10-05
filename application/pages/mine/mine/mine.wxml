@@ -1,0 +1,34 @@
+<view class="userinfo">
+  <block wx:if="{{!hasUserInfo}}">
+    <button bindtap="getUserProfile"> 获取头像昵称 </button>
+  </block>
+  <block wx:else>
+    <text class="username">Hello \n {{userInfo.nickName}}</text>
+    <image class="avatar" src="{{userInfo.avatarUrl}}" bindtap="bindViewTap" mode="cover"></image>
+  </block>
+</view>
+
+<view class="middle">
+  <view class="left">
+    <view class="ltop usertutorial" bind:tap="clickUsertutorial">
+      <text>使用说明</text>
+    </view>
+    <view class="llow feedback">
+      <button class="feedback-botton" style="width: 200rpx;height: 430rpx;font-size: 34rpx;font-weight: bold;letter-spacing:4rpx;color: #1C2C4C;" open-type='feedback'>意见反馈</button>
+    </view>
+  </view>
+  <view class="right">
+    <view class="rtop subsorg" bind:tap="clickLikeOrg">
+      <text>关注组织</text>
+    </view>
+    <view class="rlow aboutus" bind:tap="clickAboutus">
+      <text>关于我们</text>
+    </view>
+  </view>
+</view>
+
+<view class="administorView">
+  <button wx:if="{{ifAuthor}}" bind:tap="clickAdd">添加活动</button>
+  <button wx:if="{{ifAuthor}}" bind:tap="clickAddOrg">添加组织</button>
+  <button wx:if="{{ifAuthor}}" bind:tap="clickDelete">删除活动</button>
+</view>

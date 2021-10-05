@@ -1,0 +1,58 @@
+<returnBar pageTitle="{{pageVolunteer}}"></returnBar>
+<view class="container">
+  <!-- 标题 -->
+  <view class="page-body">
+    <!-- 每一个Volunteer条目 -->
+    <view class="volunteer" wx:for="{{information}}" wx:key="index" wx:if="{{item.event.Volunteer}}"
+       data-item_index="{{index}}" data-docID="{{item._id}}">
+      <view class="title-button">
+        <view class="title">{{item.event.Title}}</view>
+        <image class="addSchedule" wx:if="{{!ifSchedule[index]}}" catchtap="clickSchedule" data-item_index="{{index}}"
+          data-docID="{{item._id}}" src="/image/addSchedule.svg"></image>
+        <view class="addScheduleIn" wx:if="{{ifSchedule[index]}}"></view>
+      </view>
+      <view class="date-location-author">
+        <view class="cover">
+          <text class="const-text">服务时间：</text>
+          <text>{{item.event.Date}} {{item.event.Time}}</text>
+        </view>
+
+        <view class="cover">
+          <text class="const-text">服务地点：</text>
+          <text>{{item.event.Location}}</text>
+        </view>
+
+        <view class="cover">
+          <text class="const-text">服务内容：</text>
+          <text>{{item.event.textareaValue}}</text>
+        </view>
+
+        <view class="cover">
+          <text class="const-text">志愿者招募人数：</text>
+          <text>{{item.event.VolunteerNumber}}</text>
+        </view>
+
+        <view class="cover">
+          <text class="const-text">实施组织：</text>
+          <text>{{item.event.Holder}}</text>
+        </view>
+
+        <view class="cover font-break" >
+          <text class="const-text">报名联络人：</text>
+          <text selectable="true">{{item.event.VolunteerContact}}</text>
+        </view>
+
+        <view class="cover font-break" >
+          <text class="const-text">报名联络方式：</text>
+          <text selectable="true">{{item.event.VolunteerContactWay}}</text>
+        </view>
+
+        <view class="cover">
+          <text class="const-text">志愿时：</text>
+          <text>{{item.event.VolunteerInf}}</text>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

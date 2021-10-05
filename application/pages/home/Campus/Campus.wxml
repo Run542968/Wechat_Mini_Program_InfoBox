@@ -1,0 +1,36 @@
+<returnBar pageTitle="{{pageCampus}}"></returnBar>
+<view class="container">
+  <!-- 标题 -->
+  <view class="page-body">
+    <view class="first-column">
+      <!-- 每一个Campus条目 -->
+      <view class="campus" wx:for="{{information}}" wx:key="index" wx:if="{{item.event.Activity && index%2 == 0}}"
+        bind:tap="clickActivity" data-item_index="{{index}}" data-docID="{{item._id}}">
+        <view>
+          <image class="image" src="{{item.event.imgList[0]}}" mode="widthFix" />
+        </view>
+        <view class="title-button">
+          <text class="title">{{item.event.ActivityInf}}</text>
+          <image class="addSchedule" wx:if="{{!ifSchedule[index]}}" catchtap="clickSchedule" data-item_index="{{index}}"
+            data-docID="{{item._id}}" src="/image/addSchedule.svg"></image>
+          <image class="addScheduleIn" wx:if="{{ifSchedule[index]}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="second-column">
+      <!-- 每一个Campus条目 -->
+      <view class="campus" wx:for="{{information}}" wx:key="index" wx:if="{{item.event.Activity && index%2 == 1}}"
+        bind:tap="clickActivity" data-item_index="{{index}}" data-docID="{{item._id}}">
+        <view>
+          <image class="image" src="{{item.event.imgList[0]}}" mode="widthFix" />
+        </view>
+        <view class="title-button">
+          <text class="title">{{item.event.ActivityInf}}</text>
+          <image class="addSchedule" wx:if="{{!ifSchedule[index]}}" catchtap="clickSchedule" data-item_index="{{index}}"
+            data-docID="{{item._id}}" src="/image/addSchedule.svg"></image>
+          <view class="addScheduleIn" wx:if="{{ifSchedule[index]}}"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

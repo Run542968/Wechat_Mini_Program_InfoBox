@@ -1,0 +1,14 @@
+<titleBar wx:if="{{PageCur=='Home'}}" pageTitle="{{pageHome}}"></titleBar>
+<titleBar wx:if="{{PageCur=='Schedule'}}" pageTitle="{{pageSchedule}}"></titleBar>
+<titleBar wx:if="{{PageCur=='Mine'}}" pageTitle="{{pageMine}}"></titleBar>
+
+<home wx:if="{{PageCur=='Home'}}"></home>
+<schedule wx:if="{{PageCur=='Schedule'}}"></schedule>
+<mine wx:if="{{PageCur=='Mine'}}"></mine>
+<view class="bottom">
+  <view class="bar">
+      <image class="icon" bind:tap="toHome" src='{{PageCur=="Home" ? "/image/homeIn.svg" : "/image/home.svg"}}'></image>
+      <image class="icon" bind:tap="toSchudule" src='{{PageCur=="Schedule" ? "/image/scheduleIn.svg" : "/image/schedule.svg"}}'></image>
+      <image class="icon" bind:tap="toMine" src='{{PageCur=="Mine" ? "/image/mineIn.svg" : "/image/mine.svg"}}'></image>
+  </view>
+</view>

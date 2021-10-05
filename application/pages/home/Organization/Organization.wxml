@@ -1,0 +1,31 @@
+<returnBar pageTitle="{{pageOrgIntro}}"></returnBar>
+<view>
+    <view class="container">
+        <view class="numOfOrg">
+            <view class="numOfOrgCover">
+                <text class="const-text">入驻组织</text>
+                <text class="number">{{orgNumber}}</text>
+            </view>
+        </view>
+        <view class="organizations">
+            <view class='botton'>
+                <view class='bottonCover'>
+                    <!--通过三目运算符更换盒子样式，激活与非激活-->
+                    <text class="orgButton{{orgIndex==0 ? 'Active':''}}" bindtap="clickOrgButton"
+                        data-order="0">校级组织</text>
+                    <text class="orgButton{{orgIndex==1 ? 'Active':''}}" bindtap="clickOrgButton"
+                        data-order="1">院级组织</text>
+                </view>
+            </view>
+            <view class="organization" wx:for="{{information}}" wx:key="index" bind:tap='clickOrganization'
+                wx:if="{{item.event.index == orgIndex}}" data-item_index="{{index}}" data-docID="{{item._id}}">
+                <image class="image" src="{{item.event.imgList[0]}}" />
+                <text class="title">{{item.event.Title}}</text>
+                <view class="addFavor" wx:if="{{!ifLike[index]}}" catchtap="clickLike" data-item_index="{{index}}"
+                    data-docID="{{item._id}}"></view>
+                <view class="addFavorIn" wx:if="{{ifLike[index]}}" catchtap="clickLike" data-item_index="{{index}}"
+                    data-docID="{{item._id}}"></view>
+            </view>
+        </view>
+    </view>
+</view>

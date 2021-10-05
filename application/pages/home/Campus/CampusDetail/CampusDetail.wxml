@@ -1,0 +1,28 @@
+<returnBar pageTitle="{{pageLectureDetail}}"></returnBar>
+<view class="detail-container">
+  <view class="head-image">
+    <image src="{{information.event.imgList[0]}}" mode="widthFix"></image>
+  </view>
+  <view class="title-button">
+    <view class="title">{{information.event.Title}}</view>
+    <image class="addSchedulePic" wx:if="{{!ifSchedule}}" bind:tap="clickSchedule" src="/image/addSchedule.svg"></image>
+    <view class="addScheduleIn" wx:if="{{ifSchedule}}"></view>
+  </view>
+  <view class="data-location-author">
+    <view class="cover">
+      <text class="const-text">时间：</text>
+      <text class="date">{{information.event.Date}}  {{information.event.Time}}</text>
+    </view>
+    <view class="cover">
+    <text class="const-text">地点：</text>
+      <text class="location">{{information.event.Location}}</text>
+    </view>
+    <view class="cover">
+      <text class="const-text">主办单位：</text>
+      <text class="author">{{information.event.Holder}}</text>
+    </view>
+  </view>
+  <view  class="detail">
+    <text>{{information.event.textareaValue}}</text>
+  </view>
+</view>

@@ -1,0 +1,69 @@
+<returnBar pageTitle="{{pageLecture}}"></returnBar>
+<view class="box">
+  <text class="title">
+    下方为本小程序的操作说明(附管理端操作表单)
+  </text>
+  <text class="const-text" decode="{{true}}">
+    &nbsp;&nbsp;&nbsp;&nbsp;本程序分为三大页面，主要有首页、日程页、个人信息页。
+  </text>
+  <view class="image-group">
+    <srcoll-view srcollX="true">
+      <view>
+        <image mode="heightFix" src="{{imgList[0]}}" bindtap="preview" data-src="{{imgList[0]}}"></image>
+      </view>
+    </srcoll-view>
+  </view>
+  <text class="const-text" decode="{{true}}">
+    &nbsp;&nbsp;&nbsp;&nbsp;根据同学们最感兴趣的信息类型，又细分为讲座活动、校园活动、志愿活动、校内组织四大板块。
+  </text>
+  <text class="const-text">
+    讲座活动板块操作介绍
+  </text>
+  <view class="image-group">
+    <srcoll-view srcollX="true">
+      <view>
+        <image mode="heightFix" src="{{imgList[1]}}" bindtap="preview" data-src="{{imgList[1]}}"></image>
+      </view>
+    </srcoll-view>
+  </view>
+  <text class="const-text">
+    校园活动板块操作介绍
+  </text>
+  <view class="image-group">
+    <srcoll-view srcollX="true">
+      <view>
+        <image mode="heightFix" src="{{imgList[2]}}" bindtap="preview" data-src="{{imgList[2]}}"></image>
+      </view>
+    </srcoll-view>
+  </view>
+  <text class="const-text">
+    志愿活动板块操作介绍
+  </text>
+  <view class="image-group">
+    <srcoll-view srcollX="true">
+      <view>
+        <image mode="heightFix" src="{{imgList[3]}}" bindtap="preview" data-src="{{imgList[3]}}"></image>
+      </view>
+    </srcoll-view>
+  </view>
+  <text class="const-text">
+    校内组织板块操作介绍
+  </text>
+  <view class="image-group">
+    <srcoll-view srcollX="true">
+      <view>
+        <image mode="heightFix" src="{{imgList[4]}}" bindtap="preview" data-src="{{imgList[4]}}"></image>
+      </view>
+    </srcoll-view>
+  </view>
+  <text class="const-text">
+    管理端的数据更新入口如下
+  </text>
+  <view class="image-group">
+    <srcoll-view srcollX="true">
+      <view>
+        <image mode="heightFix" src="{{imgList[5]}}" bindtap="preview" data-src="{{imgList[5]}}"></image>
+      </view>
+    </srcoll-view>
+  </view>
+</view>

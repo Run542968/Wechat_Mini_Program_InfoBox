@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/home/Lecture/Lecture",
+    "pages/home/Campus/Campus",
+    "pages/home/Volunteer/Volunteer",
+    "pages/home/Organization/Organization",
+    "pages/mine/Add/Add",
+    "pages/mine/AddOrganization/AddOrganization",
+    "pages/home/Lecture/LectureDetail/LectureDetail",
+    "pages/home/Campus/CampusDetail/CampusDetail",
+    "pages/home/Organization/OrganizationDetail/OrganizationDetail",
+    "pages/mine/LikeOrganization/LikeOrganization",
+    "pages/mine/Feedback/Feedback",
+    "pages/mine/Usertutorial/Usertutorial",
+    "pages/mine/Aboutus/Aboutus",
+    "pages/mine/Delete/Delete"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
